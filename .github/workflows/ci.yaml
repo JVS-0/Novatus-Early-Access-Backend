@@ -16,6 +16,7 @@ env:
   PKEY: ${{ PKEY }}
   GEMAIL: ${{ GEMAIL }}
   GCLIENTID: ${{ GCLIENTID }}
+  SPREADID: ${{ SPREADID }}
 
 jobs:
   build:

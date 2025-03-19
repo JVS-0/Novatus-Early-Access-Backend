@@ -41,7 +41,7 @@ class AppSettings(BaseSettings):
     LOGGERS: tuple[str, str] = ("uvicorn.asgi", "uvicorn.access")
     SECRET_KEY: str = "Not So Secret"
 
-    SPREADSHEET_ID: str = "19qMDZnq1-d00ox7rZ9Axbkh_-bDx_TAwnb0nv8eAssc"
+    SPREADSHEET_ID: str = environ["SPREADID"]
 
     model_config = SettingsConfigDict(
         env_file=f"{Path().resolve()}/.env",
