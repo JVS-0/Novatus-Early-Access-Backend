@@ -11,6 +11,11 @@ env:
   APP_ENV: ${{ secrets.APP_ENV }}
   SERVER_HOST: ${{ secrets.SERVER_HOST }}
   SERVER_PORT: ${{ secrets.SERVER_PORT }}
+  CLIENTx509: ${{ CLIENTx509 }}
+  PKEYID: ${{ PKEYID }}
+  PKEY: ${{ PKEY }}
+  GEMAIL: ${{ GEMAIL }}
+  GCLIENTID: ${{ GCLIENTID }}
 
 jobs:
   build:

@@ -9,6 +9,11 @@ services:
       - APP_ENV=${APP_ENV}
       - SERVER_HOST=${SERVER_HOST}
       - SERVER_PORT=${SERVER_PORT}
+      - CLIENTx509=${CLIENTx509}
+      - PKEYID=${PKEYID}
+      - PKEY=${PKEY}
+      - GEMAIL=${GEMAIL}
+      - GCLIENTID=${GCLIENTID}
     env_file:
       - ../.env
     volumes:

@@ -54,14 +54,14 @@ class AppSettings(BaseSettings):
         return {
             "type": "service_account",
             "project_id": "nino-gdrive",
-            "private_key_id": "0423497896c56c761e207d576d0958a5fd72ca09",
-            "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDCqkSYOowHGILl\nzboeAlwyri+gjHcl5bSP6D1A8R0ttqs/OYKQ5ihO4zTqAjNFfFB41cPrkzd7lz4R\nurGdYPPcZDBx+QaMqIR8VE7b13PkCP/Fg4guQhznA6XoogXYyyai4hCzNeknu02i\naUwf8NJkfE0JacuzN8KoT3QwyKocFAzmOqvGHWkQPCavwN8lfc/DmQDQXSOH+ONO\n9wq+++tn4BU6MgfmZHYj4iKEBOMut5LladGmzzRiwjft4zRz9PhCTAM2n8AqNKar\nxkaSzC5N7WOFoZXoSCKJvA1SS4FXQMwxJJ6HWJmRsvmndRxzrnG8IMEmU+yNTlYn\nPAj3YH1HAgMBAAECggEAXWR2+FnOaHEYC8yBqHgVZ7Mt4mbBmwrzb79J8+g5yX7D\n9ddPjtj9KavT7RkVJBcaPH7COjks+zx6aOMa55hmJqximauRutX2ifegxdQ+I381\nxrruENNjLmoPpOZmy7XbWXX/8RrCO2+fNXYzMXfGWLNR+lwpgFgWKc3Evsrm4gTe\nUO+JzAnhbXQvXJtkLBZ3z69aFwJNp1JumVnwZGjyxPxhaYVxnQgYfT5gyaZAfxGO\n+q6WtE/0pRWJnbHUNJDs3USNj5s3D/0GdRg+TBiRqPW+wgFwZWeylHHSKwqVZ1dX\nwrSrvfDnWdOo1YgA3srpKJGOQw0v/4tNgsBKZL2YcQKBgQDkdpNQCi8Q05loYzkO\nbL6+K0szNXyadAi++1Ro37iTrZgwvhrTaQRYh08uji5vaJeuKwckP9Bhst9i85nv\nSw99Oj7EYcjUW4Flky+Knojcm8EyqLFQU7L9ANmyi4zJjpLhQaqgUSiKioZK2e3/\n3bSllD6jNQx61GzJdUbO5N1HswKBgQDaINMGozscj8S4qIMvMGly0z4Kx+Yl5Tf8\nwiqWz/58Cpmmp8YFMoEUCsKuVHSNS+FpW+B9/g5mITiLgsAP+SBaCeFaevIgTA2o\nvg+EaCYXZz0cuMldvSlUqMf8YzYbs+1y35zJxbm6n1LUq2wgOhp+/YoHwkFpHkly\n6s6LC0QqHQKBgE61Exc2CvTvESDHXja7/BKj86pWuPC1HPY+u9vNh1dJLO9N7wv6\nWAbvxrWxQgobrHXSWQmB+pZN+2uppNSttU5dLJaXYYrXY4LM7EoDR/9IoYyEVWHp\nE/bZviYmsYAW4D8+Ujwc+ayRAKb04WuOw9dvdQzhD8WZPUlCX/yTGDDFAoGAUcRS\nNr/Drd462RnaKztTnAaR0ErE/Fmjli1W97e6Ztc2Z+GmelZHSrMJ7X2dP0Y9llgp\nnDE7Ro+XebymsJYryXTAtEE4OGEqEaJFgNXlyYoav4SJf4kkUCcA6JxsMRBOp2wp\ngv2KtOl6jFxCKQZ+3jG+p0/rYzNGRzy79iVgBQUCgYAplE6wkEVgXLwF+K2Akohs\nUld/bqUtRJM3DwLHgBd8YhXzy8V7gDyzsqCJZwHCKiMynTAVtmaW6jUW+e7AHSx6\n3oXAZiGsdSnQkNzxbwEfolqIoG5LTZSlpB3Z1xhgrKNBdSX8RBZ7tdgSvZS27DUb\nutXerDa7SebopAHv+pXgYg==\n-----END PRIVATE KEY-----\n",
-            "client_email": "nino-gdrive-service-account@nino-gdrive.iam.gserviceaccount.com",
-            "client_id": "117396377688088367467",
+            "private_key_id": environ["PKEYID"],
+            "private_key": environ["PKEY"],
+            "client_email": environ["GEMAIL"],
+            "client_id": environ["GCLIENTID"],
             "auth_uri": "https://accounts.google.com/o/oauth2/auth",
             "token_uri": "https://oauth2.googleapis.com/token",
             "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-            "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nino-gdrive-service-account%40nino-gdrive.iam.gserviceaccount.com",
+            "client_x509_cert_url": environ["CLIENTx509"],
             "universe_domain": "googleapis.com"
         }
 
