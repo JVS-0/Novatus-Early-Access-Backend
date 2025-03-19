@@ -3,13 +3,13 @@ requires = ["setuptools>=69.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "jumpstart"
-description = "A template for API application with FastAPI, Docker, Pre-Commit, and GitHub Actions"
+name = "novatus_landing_page_backend"
+description = "Backend app for Novatus landing page"
 readme = "README.md"
 version = "1.0.0"
 requires-python = ">=3.12"
 authors = [
-    {name = "Nino Lindenberg", email = "aeternalis-ingenium@proton.me"}
+    {name = "Nino Lindenberg", email = "nino@jarvislab.io"}
 ]
 keywords = [
     "software engineering",
@@ -22,34 +22,39 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
 
 dependencies = [
-    "fastapi>=0.109.0",
-    "pydantic>=2.5.3",
-    "pydantic-settings>=2.1.0",
-    "pydantic_core>=2.14.6",
-    "python-multipart>=0.0.6",
+    "fastapi>=0.115.11",
+    "pydantic>=2.10.6",
+    "pydantic-settings>=2.8.1",
+    "pydantic_core>=2.27.2",
+    "python-multipart>=0.0.20",
     "setuptools>=69.0.3",
     "uvicorn>=0.26.0",
     "wheel>=0.42.0",
+    "google-auth>=2.38.0",
+    "google-api-python-client>=2.165.0",
+    "google-auth>=2.38.0",
+    "google-auth-httplib2>=0.2.0",
+    "google-auth-oauthlib>=1.2.1",
 ]
 
 [project.urls]
-repository = "https://github.com/Aeternalis-Ingenium/JumpStart"
-documentation = "https://github.com/Aeternalis-Ingenium/JumpStart/blob/trunk/README.md"
+repository = "https://github.com/JVS-0/Novatus-Early-Access-Backend"
+documentation = "https://github.com/JVS-0/Novatus-Early-Access-Backend/blob/trunk/README.md"
 
 [project.optional-dependencies]
 linter = [
     "black>=23.12.1",
     "colorama>=0.4.6",
-    "isort>=5.13.2",
-    "mypy>=1.8.0",
-    "pre-commit>=3.6.0",
+    "isort>=6.0.1",
+    "mypy>=1.15.0",
+    "pre-commit>=4.2.0",
 ]
-security = ["bandit>=1.7.6"]
-test = ["pytest-cov>=4.1.0", "asgi-lifespan>=2.1.0", "trio>=0.24.0", "httpx>=0.26.0"]
+security = ["bandit>=1.8.3"]
+test = ["pytest-cov>=6.0.0", "asgi-lifespan>=2.1.0", "trio>=0.24.0", "httpx>=0.28.1"]
 
 [tool.bandit]
 exclude_dirs = ["tests"]
