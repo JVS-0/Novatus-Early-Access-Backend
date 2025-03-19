@@ -22,7 +22,7 @@ class AppSettings(BaseSettings):
     OPENAPI_URL: str = "/openapi.json"
     REDOC_URL: str = "/redoc"
     HOST: str = environ["SERVER_HOST"]
-    PORT: int = int(environ["SERVER_PORT"])
+    PORT: int = environ["SERVER_PORT"] # type: ignore
     WORKERS: int = 4
     TIMEZONE: str = "UTC"
     DESCRIPTION: str = ""
