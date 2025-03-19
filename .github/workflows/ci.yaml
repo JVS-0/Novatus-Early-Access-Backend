@@ -11,7 +11,7 @@ env:
   APP_ENV: ${{ secrets.APP_ENV }}
   SERVER_HOST: ${{ secrets.SERVER_HOST }}
   SERVER_PORT: ${{ secrets.SERVER_PORT }}
-  CLIENTx509: ${{ CLIENTx509 }}
+  CLIENTx509: ${{ CLIENTX509 }}
   PKEYID: ${{ PKEYID }}
   PKEY: ${{ PKEY }}
   GEMAIL: ${{ GEMAIL }}
