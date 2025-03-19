@@ -10,7 +10,7 @@ from src.core.event import event_manager
 
 
 class App:
-    def __init__(self, event_manager: Callable, router: APIRouter, settings: AppSettings):
+    def __init__(self, event_manager: Callable, router: APIRouter, settings: AppSettings):   # type: ignore
         self.__app = FastAPI(lifespan=event_manager, **settings.set_app_attributes)  # type: ignore
         self.__setup_middlewares(settings=settings)
         self.__add_routes(router=router, settings=settings)

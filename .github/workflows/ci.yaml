@@ -8,25 +8,9 @@ on:
       - "release/v*.*.*"
       - "dependabot/**"
 env:
-  ACCESS_LOGGER: ${{ secrets.ACCESS_LOGGER }}
-  ALL_HEADERS: ${{ secrets.ALL_HEADERS }}
-  API_PREFIX: ${{ secrets.API_PREFIX }}
   APP_ENV: ${{ secrets.APP_ENV }}
-  APP_VERSION: ${{ secrets.APP_VERSION }}
-  ASGI_LOGGER: ${{ secrets.ASGI_LOGGER }}
-  DOCS_URL: ${{ secrets.DOCS_URL }}
-  IS_ALLOWED_CREDENTIALS: ${{ secrets.IS_ALLOWED_CREDENTIALS }}
-  METHOD_1: ${{ secrets.METHOD_1 }}
-  METHOD_2: ${{ secrets.METHOD_2 }}
-  METHOD_3: ${{ secrets.METHOD_3 }}
-  METHOD_4: ${{ secrets.METHOD_4 }}
-  METHOD_5: ${{ secrets.METHOD_5 }}
-  OPENAPI_URL: ${{ secrets.OPENAPI_URL }}
-  REDOC_URL: ${{ secrets.REDOC_URL }}
-  SECRET_KEY: ${{ secrets.SECRET_KEY }}
   SERVER_HOST: ${{ secrets.SERVER_HOST }}
   SERVER_PORT: ${{ secrets.SERVER_PORT }}
-  SERVER_WORKERS: ${{ secrets.SERVER_WORKERS }}
 
 jobs:
   build:
@@ -120,11 +104,3 @@ jobs:
     - name: Test with Pytest and Coverage
       run: |
         pytest --cov --cov-report xml .
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v5.4.0
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        fail_ci_if_error: true
-        flags: pleno_rapid_assessment
-        name: codecov-umbrella
-        verbose: true

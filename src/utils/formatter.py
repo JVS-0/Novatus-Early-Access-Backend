@@ -18,7 +18,7 @@ class Formatter:
     def datetime_to_isoformat(self, date_time: datetime) -> str:
         return date_time.replace(tzinfo=timezone.utc).isoformat().replace("+00:00", "Z")
 
-    def str_to_bytes(self, obj: dict):
+    def str_to_bytes(self, obj: dict): # type: ignore
         json_str = dumps(obj)
         return json_str.encode("utf-8")
 
