@@ -45,7 +45,7 @@ jobs:
         run: echo "sha_short=$(git rev-parse HEAD | cut -c1-8)" >> $GITHUB_OUTPUT
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@84ad562665bb303b549fec655d1b64f9945f3f91
+        uses: docker/build-push-action@9e436ba9f2d7bcd1d038c8e55d039d37896ddc5d
         with:
           file: ./docker/Dockerfile.prod
           push: true
